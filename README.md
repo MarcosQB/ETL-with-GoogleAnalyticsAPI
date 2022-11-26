@@ -1,10 +1,14 @@
 # Google Analytics Reporting API With Python for ETL and Request
-### Problema
-##### A Área de Retail&Performance de umas das organizações que trabalhei solicitou um Dashboard a onde fosse possível visualizar os dados de **TODAS** as Lojas Online que eles mantinham controle no Google Analytics. Ao iniciar à construção dele no Looker Studio nos deparamos com o problema da ferramenta apenas puxar os dados de uma Loja por vés e mesmo adicionando os dados de outras lojas ele tinha grande difuldade em unir esses dados em uma base única, além disso todo esse processo ficaria extremamente manual o que causaria um problema de escabilidade.
-### Solução
-##### Para solucionar essa questão decidi construir um script em Python que unisse os dados de **TODAS** as Lojas Online em uma única base de dados. Dessa forma o script apresentado nesse projeto faz requisições para a API do Google Sheets que retorna os identificadores das nossas Lojas Online que anteriormente solicitei para área responsavel preencher e manter atualizado em uma planilha. Esses identificadores são utilizados para realizar a Requesição para a API do Google Analytics. O retorno dos dados de cada Loja é tratado e unido em um único DataFrame que é enviado para o Google BigQuery como Tabela para posteriormente ser consumido pelo Looker Studio na construção do Dashboard.
+### Proposta:
+##### A área de Retail & Performance de umas das organizações que trabalhei solicitou um Dashboard onde fosse possível visualizar os dados de todas as Lojas Online cujo os dados eram mantidos sob controle no Google Analytics.
+
+##### Ao iniciar a construção do dashboard no Looker Studio obtive um resultado não correspondente às minhas expectativas iniciais: a ferramenta era capaz apenas de importar os dados de uma loja por vez, e ainda que fizéssemos essa importação uma a uma de forma manual, os dados não eram unificados em uma base única, somando-se a problemática de no futuro esse ser um processo altamente trabalhoso no caso de atingirmos um número maior de lojas.
+
+### Solução:
+##### A fim de resolver este problema, unifiquei os dados de todas as lojas em uma única base de dados, me utilizando da programação de um script em linguagem Python. E para tornar isso possível, o script faz requisições para a API do Google Sheets que retorna os identificadores das Lojas Online que anteriormente solicitei para área responsável preencher e manter atualizado em uma planilha. Posteriormente, os identificadores obtidos serão utilizados para uma nova requisição: a de solicitar os dados das lojas para o Google Analytics. Já com os dados à disposição, eles são tratados e unificados em um Data Frame, que é enviado em formato de tabela para o Google Big Query (serviço de armazenamento de dados em nuvem) e posteriormente são utilizados para nutrir o Looker Studio onde eles serão trabalhados na construção do dashboard.
+
 ### Detalhes Técnicos
-* ######  O script foi construido no Jupyter Notebook
-* ######  O script foi construido em PYTHON
-* ######  Todo processo de ETL foi construído utilizando as seguintes bibliotecas: Pandas, Numpy e Itertools.
+* ######  A interface de desenvolvimento utilizada foi o Jupyter Notebook;
+* ######  A linguagem de programação utilizada foi a Python;
+* ######  Todo processo de extração, transformação e carregamento (ETL) dos dados foi construído utilizando as seguintes bibliotecas: Pandas, Numpy e Itertools.
 * ###### Para armazenar os dados foi utilizado o Google BigQuery
