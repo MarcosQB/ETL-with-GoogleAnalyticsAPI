@@ -1,4 +1,4 @@
-# Google Analytics Reporting API With Python for ETL and Request
+# Google Analytics Reporting API With Python for request and ETL 
 ### Proposta:
 ##### A área de Retail & Performance de umas das organizações que trabalhei solicitou um Dashboard onde fosse possível visualizar os dados de todas as Lojas Online cujo os dados eram mantidos sob controle no Google Analytics.
 
