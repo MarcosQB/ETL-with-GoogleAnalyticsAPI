@@ -12,3 +12,5 @@
 * ######  A linguagem de programação utilizada foi a Python;
 * ######  Todo processo de extração, transformação e carregamento (ETL) dos dados foi construído utilizando as seguintes bibliotecas: Pandas, Numpy e Itertools.
 * ###### Para armazenar os dados foi utilizado o Google BigQuery
+
+#### [Confira o script clikando aqui!](https://github.com/MarcosQB/ETL-with-GoogleAnalyticsAPI/blob/main/Google%20Analytics%20Request%20API.ipynb)
